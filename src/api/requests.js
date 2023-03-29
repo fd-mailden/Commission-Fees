@@ -1,4 +1,4 @@
-import { BaseHttpServices } from '../services/base-http-servise';
+import { BaseHttpServices } from '../services/baseHTTPServise';
 
 class _CommissionApiService {
   http = new BaseHttpServices();

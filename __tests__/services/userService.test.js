@@ -1,4 +1,4 @@
-import { userService } from '../../src/services/user-service';
+import { userService } from '../../src/services/userService';
 import { describe, expect, test } from '@jest/globals';
 
 describe('userService', () => {

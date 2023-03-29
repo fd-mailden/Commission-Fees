@@ -1,5 +1,5 @@
-export const getCommission = (money, interest) => {
-  if (money < 0 || interest < 0) return 0;
-  const number = (money / 100) * interest;
+export const getCommission = (cash, commissionPercentage) => {
+  if (cash < 0 || commissionPercentage < 0) return 0;
+  const number = (cash / 100) * commissionPercentage;
   return Math.round(number * 100) / 100;
 };

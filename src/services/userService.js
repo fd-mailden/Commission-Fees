@@ -1,4 +1,4 @@
-import { getIsCurrentWeek } from '../helpers/getWeekValitation';
+import { weekValidationService } from './weekValidationService';
 
 export class userService {
   constructor(user, currentDate, weekLimit) {
@@ -9,7 +9,7 @@ export class userService {
 
   getIsInOneWeek(currentDate) {
     if (!currentDate) return false;
-    return getIsCurrentWeek(
+    return weekValidationService.getIsThisWeek(
       this.user?.transaction[this.user?.transaction.length - 1],
       currentDate,
     );

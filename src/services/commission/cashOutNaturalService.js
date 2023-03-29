@@ -1,6 +1,6 @@
 import { configurationsState } from '../../states/configurations/configurationsState';
-import { userStateService } from '../user-state-service';
-import { userService } from '../user-service';
+import { userStateService } from '../userStateService';
+import { userService } from '../userService';
 import { getCommission } from '../../helpers/getCommission';
 import { SITUATION } from '../../consts/commissions';
 

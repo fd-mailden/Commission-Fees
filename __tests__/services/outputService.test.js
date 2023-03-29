@@ -1,5 +1,5 @@
 import { describe, expect, test, jest } from '@jest/globals';
-import { outputService } from '../../src/services/output-service';
+import { outputService } from '../../src/services/outputService';
 
 describe('outputService', () => {
   test('should log formatted commission data to the console', () => {

@@ -1,5 +1,5 @@
 import { describe, expect, test, afterEach } from '@jest/globals';
-import { userStateService } from '../../src/services/user-state-service';
+import { userStateService } from '../../src/services/userStateService';
 
 describe('userStateService', () => {
   afterEach(() => {
