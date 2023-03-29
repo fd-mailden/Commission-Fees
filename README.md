@@ -1,13 +1,40 @@
+# Commission Fees Application
 
-Hi!
+This application is designed to calculate commission fees for financial transactions based on the provided input data.
+The calculation is performed using the rules defined in the task description.
 
-Please do not forget to add the .env file
+## Getting Started
 
-You need to perform several operations in the terminal:
-    1. docker build -t commission-fees-image .
-    2. docker run -it --rm  commission-fees-image build/app.js input-data/input.json
+To get started with this application, please follow the instructions below.
 
-For testing, you will need to write:
-    1. npm install
-    2. npm run test
+### Prerequisites
 
+Before you can use this application, you need to have Docker and Node.js installed on your machine.
+
+### Installation
+
+1. Clone this repository to your local machine.
+2. Navigate to the root directory of the application in your terminal.
+3. Create a new `.env` file and provide the necessary values (see below for details).
+4. Run docker `build -t commission-fees-image .` to build the Docker image.
+5. Run `npm install` to install the required dependencies.
+
+### Usage
+
+To use this application, please perform the following steps:
+
+1. Navigate to the root directory of the application in your terminal.
+2. Run `docker run -it --rm commission-fees-image build/app.js input-data/input.json` to run the application and
+   calculate commission fees for the provided input data.
+
+### Testing
+
+To test this application, please perform the following steps:
+
+1. Navigate to the root directory of the application in your terminal.
+2. Run `npm run test` to run the automated tests and verify the functionality of the application
+
+
+## Authors
+
+[Danil Kravchenko](https://github.com/fd-mailden)
