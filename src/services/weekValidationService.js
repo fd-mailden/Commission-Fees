@@ -1,8 +1,10 @@
-import moment from 'moment/moment';
+import { getISOWeek } from 'date-fns';
 
 class _weekValidationService {
   getIsThisWeek(previousDate, currentDate) {
-    return moment(previousDate).isoWeek() === moment(currentDate).isoWeek();
+    const previous = new Date(previousDate);
+    const current = new Date(currentDate);
+    return getISOWeek(previous) === getISOWeek(current);
   }
 }
 

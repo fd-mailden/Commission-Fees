@@ -96,7 +96,7 @@ describe('final functional test', () => {
   test('test', () => {
     const userList = users.get();
     const commissionList = userList.map((user) =>
-      new commissionManager(user).getCommission(),
+      new commissionManager(user).get(),
     );
     expect(commissionList).toEqual([0.06, 0.9, 87, 3, 0.3, 0.3, 5, 0, 0]);
   });

@@ -10,7 +10,7 @@ import { configurationAction } from './states/configurations/configurationAction
     const dataFile = await readJsonFile(process.argv[2]);
     if (dataFile) {
       const commissionList = dataFile.map((user) =>
-        new commissionManager(user).getCommission(),
+        new commissionManager(user).get(),
       );
       outputService.outputInConsole(commissionList);
     }

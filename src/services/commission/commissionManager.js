@@ -7,7 +7,6 @@ import { cashOutJuridicalService } from './cashOutJuridicalService';
 export class commissionManager {
   constructor(user) {
     this.user = user;
-
     this.strategies = {
       cashInNatural: new cashInNaturalService(user),
       cashInJuridical: new cashInNaturalService(user),
@@ -16,7 +15,7 @@ export class commissionManager {
     };
   }
 
-  getCommission() {
+  get() {
     const strategy =
       this.strategies[COMMISSIONS_METHODS[this.user.type][this.user.user_type]];
     return strategy.getCommission();
