@@ -1,4 +1,4 @@
-import { readJsonFile } from './helpers/readerFile';
+import { readJsonFile } from './utils/readerFile';
 import { outputService } from './services/outputService';
 import { commissionManager } from './services/commission/commissionManager';
 import { configurationAction } from './states/configurations/configurationAction';

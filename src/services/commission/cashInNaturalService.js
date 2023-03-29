@@ -1,6 +1,6 @@
 import { configurationsState } from '../../states/configurations/configurationsState';
-import { getCommission } from '../../helpers/getCommission';
 import { SITUATION } from '../../consts/commissions';
+import { calculateCommissionService } from '../calculateCommissionService';
 
 export class cashInNaturalService {
   constructor(userData) {
@@ -9,6 +9,7 @@ export class cashInNaturalService {
   }
 
   getCommission() {
+    const { getCommission } = calculateCommissionService;
     const commission = getCommission(
       this.userData.operation.amount,
       this.config.percents,

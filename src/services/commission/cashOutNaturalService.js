@@ -1,8 +1,8 @@
 import { configurationsState } from '../../states/configurations/configurationsState';
 import { userStateService } from '../userStateService';
 import { userService } from '../userService';
-import { getCommission } from '../../helpers/getCommission';
 import { SITUATION } from '../../consts/commissions';
+import { calculateCommissionService } from '../calculateCommissionService';
 
 export class cashOutNaturalService {
   constructor(userData) {
@@ -11,6 +11,7 @@ export class cashOutNaturalService {
   }
 
   getCommission() {
+    const { getCommission } = calculateCommissionService;
     const user = userStateService.getUser(this.userData.user_id);
     const operationAmount = this.userData.operation.amount;
     const limit = new userService(

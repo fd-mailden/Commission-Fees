@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { readJsonFile } from '../../src/helpers/readerFile';
+import { readJsonFile } from '../../src/utils/readerFile';
 import { describe, expect, test } from '@jest/globals';
 
 describe('readJsonFile', () => {
