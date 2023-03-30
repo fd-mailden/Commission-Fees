@@ -10,6 +10,3 @@ COPY . .
 
 RUN npm run build
 
-CMD ["npm", "start", "--"]
-
-ENTRYPOINT ["node", "--require", "@babel/register"]

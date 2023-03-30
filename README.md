@@ -16,15 +16,15 @@ Before you can use this application, you need to have Docker and Node.js install
 1. Clone this repository to your local machine.
 2. Navigate to the root directory of the application in your terminal.
 3. Create a new `.env` file and provide the necessary values (see below for details).
-4. Run docker `build -t commission-fees-image .` to build the Docker image.
-5. Run `npm install` to install the required dependencies.
+4. Run docker `docker build -t commission-fees-image .` to build the Docker image.
 
 ### Usage
 
 To use this application, please perform the following steps:
 
 1. Navigate to the root directory of the application in your terminal.
-2. Run `docker run -it --rm commission-fees-image build/app.js input-data/input.json` to run the application and
+2. Run `docker run -it --rm -v $(pwd):/app commission-fees-image node build/app input-data/input.json` to run the
+   application and
    calculate commission fees for the provided input data.
 
 ### Testing
@@ -32,8 +32,8 @@ To use this application, please perform the following steps:
 To test this application, please perform the following steps:
 
 1. Navigate to the root directory of the application in your terminal.
-2. Run `npm run test` to run the automated tests and verify the functionality of the application
-
+2. Run `docker run -it --rm commission-fees-image npm test` to run the automated tests and verify the functionality of
+   the application
 
 ## Authors
 
