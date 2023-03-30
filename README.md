@@ -35,6 +35,16 @@ To test this application, please perform the following steps:
 2. Run `npm run test` to run the automated tests and verify the functionality of
    the application
 
+## Docker
+
+1. Build docker image `docker build -t commission-fees-image .`
+2. Run docker container `docker run -t -d --name commission-container commission-fees-image`
+3. Run  `docker exec commission-container node build/app input-data/input.json` to run the
+   application
+4. Run`docker exec commission-container npm run test` to run the automated tests and verify the functionality of
+   the application
+5. Stop docker container `docker stop commission-container`
+
 ## Authors
 
 [Danil Kravchenko](https://github.com/fd-mailden)
