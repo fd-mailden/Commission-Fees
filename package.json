@@ -3,7 +3,7 @@
     "build": "babel src -d build",
     "test": "jest",
     "lint": "eslint .",
-    "start": "babel-watch src/app.js input-data/input.json",
+    "start": "babel-watch src/app.js",
     "format": "prettier --write '**/*.{js,json,md}'"
   },
   "devDependencies": {
