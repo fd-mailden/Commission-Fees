@@ -115,7 +115,7 @@ describe('final functional test', () => {
       { commission: 5 },
       { commission: 0 },
       { commission: 0 },
-      { error: 'not supported currency' },
+      { error: 'Only supported currency is EUR' },
     ]);
   });
 });
