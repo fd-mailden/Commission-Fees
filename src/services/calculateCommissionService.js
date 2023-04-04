@@ -1,7 +1,8 @@
 class _calculateCommissionService {
   getCommission(cash, commissionPercentage) {
-    const number = (cash / 100) * commissionPercentage;
-    return Math.round(number * 100) / 100;
+    const commissionFee = (cash / 100) * commissionPercentage;
+    const centsPerEuro = 100;
+    return Math.ceil(commissionFee * centsPerEuro) / centsPerEuro;
   }
 }
 
