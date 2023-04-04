@@ -67,6 +67,13 @@ const users = {
       type: 'cash_out',
       operation: { amount: 300.0, currency: 'EUR' },
     },
+    {
+      date: '2016-02-15',
+      user_id: 1,
+      user_type: 'natural',
+      type: 'cash_out',
+      operation: { amount: 300.0, currency: 'USD' },
+    },
   ]),
 };
 beforeEach(() => {
@@ -98,6 +105,17 @@ describe('final functional test', () => {
     const commissionList = userList.map((user) =>
       new commissionManager(user).get(),
     );
-    expect(commissionList).toEqual([0.06, 0.9, 87, 3, 0.3, 0.3, 5, 0, 0]);
+    expect(commissionList).toEqual([
+      { commission: 0.06 },
+      { commission: 0.9 },
+      { commission: 87 },
+      { commission: 3 },
+      { commission: 0.3 },
+      { commission: 0.3 },
+      { commission: 5 },
+      { commission: 0 },
+      { commission: 0 },
+      { error: 'not supported currency' },
+    ]);
   });
 });

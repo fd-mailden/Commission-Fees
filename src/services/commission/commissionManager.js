@@ -16,8 +16,11 @@ export class commissionManager {
   }
 
   get() {
+    if (this.user.operation.currency !== 'EUR') {
+      return { error: 'not supported currency' };
+    }
     const strategy =
       this.strategies[COMMISSIONS_METHODS[this.user.type][this.user.user_type]];
-    return strategy.getCommission();
+    return { commission: strategy.getCommission() };
   }
 }
